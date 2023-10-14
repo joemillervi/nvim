@@ -1,3 +1,9 @@
 # nvim
-Need to install mason
-Packer Install
+Configs for neovim
+
+# SETUP
+install mason
+go into lua/joe/packer.lua
+:so
+:PackerSync
+
