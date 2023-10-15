@@ -54,6 +54,8 @@ require("telescope").setup {
                     ["D"] = fb_actions.remove,
                     ["o"] = fb_actions.open,
                     ["-"] = fb_actions.goto_parent_dir,
+                    -- use l instead of CR to go into directories and files
+                    ["l"] = require'telescope.actions'.select_default,
                     ["e"] = fb_actions.goto_home_dir,
                     ["w"] = fb_actions.goto_cwd,
                     ["t"] = fb_actions.change_cwd,
@@ -68,3 +70,6 @@ require("telescope").setup {
 -- To get telescope-file-browser loaded and working with telescope,
 -- you need to call load_extension, somewhere after setup function:
 require("telescope").load_extension "file_browser"
+
+-- open file browser instead of netrw, open in normal mode
+vim.keymap.set("n", "<leader>pv", "<cmd>Telescope file_browser path=%:p:h initial_mode=normal<CR>")
