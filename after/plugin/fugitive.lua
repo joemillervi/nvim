@@ -24,5 +24,8 @@ autocmd("BufWinEnter", {
 		-- NOTE: It allows me to easily set the branch i am pushing and any tracking
 		-- needed if i did not set the branch up correctly
 		vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts)
+
+    -- close on q
+		vim.keymap.set("n", "q", "<cmd>:q<CR>")
 	end,
 })
