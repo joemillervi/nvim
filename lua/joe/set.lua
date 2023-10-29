@@ -1,7 +1,7 @@
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 vim.opt.cursorline = true
 

@@ -26,15 +26,8 @@ require("formatter").setup({
 				}
 			end,
 		},
-		javascript = {
-			require("formatter.filetypes.lua").prettierd,
-			function()
-				return {
-					exe = "prettierd",
-					args = { util.get_current_buffer_file_path() },
-					stdin = true,
-				}
-			end,
+		typescriptreact = {
+			require("formatter.filetypes.typescriptreact").prettierd,
 		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
