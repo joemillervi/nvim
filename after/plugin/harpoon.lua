@@ -30,3 +30,16 @@ require("harpoon").setup({
 		width = vim.api.nvim_win_get_width(0) - 4,
 	},
 })
+
+-- use l to enter into a file
+function set_harpoon_keymap()
+    -- Check if the buffer's filetype is 'harpoon'
+    if vim.bo.filetype == 'harpoon' then
+        vim.api.nvim_buf_set_keymap(0, 'n', 'l', '<Cmd>lua require("harpoon.ui").select_menu_item()<CR>', { noremap = true, silent = true })
+    end
+end
+vim.api.nvim_command('augroup HarpoonOverride')
+vim.api.nvim_command('autocmd!')
+vim.api.nvim_command('autocmd FileType * lua set_harpoon_keymap()')
+vim.api.nvim_command('augroup END')
+
