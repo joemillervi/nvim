@@ -61,4 +61,6 @@ return require("packer").startup(function(use)
 	use("mhartington/formatter.nvim")
 
 	use("folke/zen-mode.nvim")
+
+  use 'eandrju/cellular-automaton.nvim'
 end)
