@@ -3,6 +3,9 @@ local fb_actions = require("telescope._extensions.file_browser.actions")
 require("telescope").setup({
 	extensions = {
 		file_browser = {
+      layout_config = {
+        height = 100,
+      },
 			initial_mode = "normal",
 			theme = "ivy",
 			path = vim.loop.cwd(),
@@ -21,7 +24,7 @@ require("telescope").setup({
 			browse_folders = require("telescope._extensions.file_browser.finders").browse_folders,
 			hide_parent_dir = false,
 			collapse_dirs = false,
-			display_stat = { date = true, size = true, mode = false },
+			display_stat = false,
 			prompt_path = false,
 			quiet = false,
 			dir_icon = "",
