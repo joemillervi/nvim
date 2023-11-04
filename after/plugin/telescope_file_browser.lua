@@ -1,11 +1,14 @@
 local fb_actions = require("telescope._extensions.file_browser.actions")
 
 require("telescope").setup({
+	layout_config = {
+		width = 100,
+	},
 	extensions = {
 		file_browser = {
-      layout_config = {
-        height = 100,
-      },
+			layout_config = {
+				height = 100,
+			},
 			initial_mode = "normal",
 			theme = "ivy",
 			path = vim.loop.cwd(),
@@ -53,7 +56,7 @@ require("telescope").setup({
 				["n"] = {
 					["%"] = fb_actions.create,
 					["r"] = fb_actions.rename,
-					["p"] = fb_actions.move,
+					["m"] = fb_actions.move,
 					["y"] = fb_actions.copy,
 					["D"] = fb_actions.remove,
 					["o"] = fb_actions.open,

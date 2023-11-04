@@ -1,0 +1,4 @@
+LSP - completion of strings in the file
+LSP - completion of javascript
+LSP - completion of graphql
+
