@@ -1,11 +1,16 @@
-require("conform").setup({
+require('conform').setup({
 	formatters_by_ft = {
-		lua = { "stylua" },
+		lua = { 'stylua' },
 		-- Conform will run multiple formatters sequentially
-		python = { "isort", "black" },
+		python = { 'isort', 'black' },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "prettierd", "prettier" } },
+		javascript = { { 'prettierd', 'prettier' } },
+		javascriptreact = { { 'prettierd', 'prettier' } },
+		typescript = { { 'prettierd', 'prettier' } },
+		typescriptreact = { { 'prettierd', 'prettier' } },
+		json = { { 'prettierd', 'prettier' } },
+		['*'] = { 'trim_whitespace' },
 	},
 })
 
-vim.keymap.set("n", "<leader>f", require("conform").format)
+vim.keymap.set('n', '<leader>f', require('conform').format)
