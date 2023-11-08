@@ -39,6 +39,9 @@ vim.api.nvim_set_keymap('n', '<C-]>', ':lua vim.lsp.buf.definition()<CR>', { nor
 -- Map ] to show type definition
 vim.api.nvim_set_keymap('n', '<C-\\>', ':lua vim.lsp.buf.type_definition()<CR>', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+
+
 -- close quickfix menu after selecting choice with <Enter>
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = { 'qf' },

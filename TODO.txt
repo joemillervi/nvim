@@ -1,4 +1,8 @@
 LSP - completion of strings in the file
 LSP - completion of javascript
 LSP - completion of graphql
+telescope - when grepping go into visual mode and l should enter file
+telescope - take up full screen
+GPT - integrate gpt to have a convo about current buffer
+  - https://github.com/Robitx/gp.nvim (?)
 
